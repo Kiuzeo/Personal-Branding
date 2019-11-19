@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css?family=Catamaran&display=swap');
+
+
+body {
+  margin: 0px;
+  background-color: #000526;
+}
+
+.bandeau,
+.histoire,
+.formation,
+.phrase,
+.slogan,
+.gridbouton,
+.citation__phrase {
+  font-family: "Catamaran", sans-serif;
+  font-weight: 700 ;
+}
+
+.source,
+.txtcarre,
+.citation__source {
+  font-family: "Catamaran", sans-serif;
+  font-weight: 400 ;
+}
+
+/*Bandeau */
+.bandeau {
+  width: auto;
+  height: 77px;
+  background-color: #e14141;
+}
+
+.pseudo {
+  margin-left: 43%;
+  margin-top: -16%;
+  font-size: 17px;
+}
+
+.logo {
+  text-align: center;
+  margin: 13px;
+  height: 50px;
+}
+
+.reseauxsociaux{
+  margin-top: -40px;
+  margin-left: 78%;
+}
+
+.ressoc {
+  width: 20px;
+}
+
+/*footer*/
+
+.footer {
+  height: 42px;
+  margin-top: 20px;
+  width: auto;
+  text-align: center;
+  background-color: #101010;
+}
+
+.signature {
+  margin-top: 6px;
+  height: 30px;
+}
+
+
+
+input[type=text], select, textarea {
+ width: 100%; /* Full width */
+ padding: 12px; /* Some padding */
+ border: 1px solid #00107D; /* Gray border */
+ border-radius: 4px; /* Rounded borders */
+ box-sizing: border-box; /* Make sure that padding and width stays in place */
+ background-color: #000526;
+ color: white;
+ margin-top: 6px; /* Add a top margin */
+ margin-bottom: 16px; /* Bottom margin */
+ resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+ background-color: #E14141;
+ color: white;
+ padding: 12px 20px;
+ border: none;
+ border-radius: 4px;
+ cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+ background-color: #414141;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+ border-radius: 10px;
+ background-color: #1F2F5D;
+ padding: 20px;
+ margin: 10%;
+ color: white;
+ font-family: "Catamaran";
+}
+
+.info{
+
+  display: flex;
+  flex-direction: row;
+  font-family: "Catamaran";
+  color: white;
+  margin-left:10%;
+  margin-right: 10%;
+  font-size: 10px;
+}
+
+.maill{
+  margin-left:30px;
+}
+
+
+/*Format PC */
+
+@media (min-width: 1280px) {
+
+body {
+  margin: 0px;
+  background-color: #000526;
+}
+
+.bandeau,
+.histoire,
+.formation,
+.phrase,
+.slogan,
+.gridbouton,
+.citation__phrase {
+  font-family: "Catamaran", sans-serif;
+  font-weight: 700 ;
+}
+
+.source,
+.txtcarre,
+.citation__source {
+  font-family: "Catamaran", sans-serif;
+  font-weight: 400 ;
+}
+
+/*Bandeau */
+.bandeau {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: 154px;
+  background-color: #e14141;
+}
+
+.pseudo {
+  margin-top: -95px;
+  margin-left: 20px;
+  font-size: 34px;
+}
+
+.logo {
+  text-align: center;
+  margin-top: 25px;
+  margin-left: 940px;
+  height: 100px;
+}
+
+.reseauxsociaux{
+  margin-top: -85px;
+  margin-left: 51%;
+}
+
+.ressoc {
+  margin-top: 0px;
+  position: relative;
+  left:1250px;
+  width: 40px;
+}
+
+/*footer*/
+
+.footer {
+  height: 42px;
+  width: auto;
+  text-align: center;
+  background-color: #101010;
+  margin-top: 40px;
+}
+
+.signature {
+  margin-top: 3px;
+  height: 30px;
+}
+
+
+input[type=text], select, textarea {
+ width: 100%; /* Full width */
+ padding: 12px; /* Some padding */
+ border: 1px solid #00107D; /* Gray border */
+ border-radius: 4px; /* Rounded borders */
+ box-sizing: border-box; /* Make sure that padding and width stays in place */
+ background-color: #000526;
+ color: white;
+ margin-top: 6px; /* Add a top margin */
+ margin-bottom: 16px; /* Bottom margin */
+ resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+ background-color: #E14141;
+ color: white;
+ padding: 12px 20px;
+ border: none;
+ border-radius: 4px;
+ cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+ background-color: #414141;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+ border-radius: 10px;
+ background-color: #1F2F5D;
+ padding: 20px;
+ margin: 10%;
+ color: white;
+ font-family: "Catamaran";
+}
+
+.info{
+
+  display: flex;
+  flex-direction: row;
+  font-family: "Catamaran";
+  color: white;
+  margin-left:38%;
+  margin-right: 10%;
+  font-size: 20px;
+}
+
+.maill{
+  margin-left: 30px;
+}
