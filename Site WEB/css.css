@@ -207,102 +207,135 @@ body {
 
 .rectbluemarin {
   height: 286px;
+  padding: 20px;
   background-color: #000526;
 }
 
-* {box-sizing:border-box}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+#i1, #i2, #i3, #i4{
+	display: none;
 }
 
-/* Hide the images by default */
-.mySlides {
-  display: none;
+.container{
+		margin: 0 auto;
+		margin-top: 20px;
+		position: relative;
+		width: 50%;
+		padding-bottom: 285px;
+	  user-select: none;
+		background-color: #1c1c1c;
+		border: solid 10px #1f2f5d;
+		border-radius:10px ;
+	}
+
+	.container .slide_img{
+		position: absolute;
+		width: 100%;
+
+	}
+	.container .slide_img img{
+		width: inherit;
+		height: inherit;
+	}
+
+	 .prev, .next{
+		width: 12%;
+		height: inherit;
+    margin-right: 20px;
+		position: absolute;
+		top:45%;
+		background-color: rgba(88, 88, 88,.2);
+		color:rgba(244, 244, 244,.9);
+		z-index: 99;
+		transition: .45s;
+		cursor: pointer;
+		text-align: center;
+	}
+
+	.next{right:0;}
+	.prev{left:0;}
+
+	label span{
+		position: absolute;
+		font-size: 100pt;
+		top: 50%;
+	 	transform: translateY(-50%);
+	}
+
+	.prev:hover, .next:hover{
+		transition: .3s;
+		background-color: rgba(88, 88, 89,.8);
+		color: #ffffff;
+	}
+
+.container #nav_slide{
+	width: 100%;
+	bottom: 3%;
+	height: 11px;
+	position: absolute;
+	text-align: center;
+	z-index: 99;
+	cursor: default;
 }
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+#nav_slide .dots{
+	top: -5px;
+	width: 18px;
+	height: 18px;
+	margin: 0 4px;
+	position: relative;
+	border-radius: 100%;
+	display: inline-block;
+	background-color: rgba(0, 0, 0, 0.6);
+	transition: .4s;
 }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+#nav_slide .dots:hover {
+	cursor: pointer;
+	background-color: rgba(255, 255, 255, 0.9);
+	transition: .25s
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.slide_img{z-index: -1;}
+
+	#i1:checked ~ #one  ,
+	#i2:checked ~ #two  ,
+	#i3:checked ~ #three,
+	#i4:checked ~ #four ,
+	#i5:checked ~ #five
+	{z-index: 9; animation: scroll 1s ease-in-out;}
+
+	#i1:checked  ~  #nav_slide #dot1,
+	#i2:checked  ~  #nav_slide #dot2,
+	#i3:checked  ~  #nav_slide #dot3,
+	#i4:checked  ~  #nav_slide #dot4,
+	#i5:checked  ~  #nav_slide #dot5
+	{ background-color: rgba(255,255,255,.9);}
+
+@keyframes scroll{
+	0%{	opacity:.4;}
+	100%{opacity:1;}
 }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
+@media screen and (max-width: 685px){
+	.container{
+		border: none;
+		width: 100%;
+		height: 0;
+		padding-bottom: 41%;
+	}
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
+	label span { font-size: 50pt; }
 
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+	.prev, .next{
+		width: 15%;
+	}
+	#nav_slide .dots{
+		width: 12px;
+		height: 12px;
+	}
 }
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+@media screen  and(min-width: 970px){
+	.me{ display: none;}
 }
 
 /* boutons */
@@ -389,7 +422,7 @@ body {
 
 .pseudo {
   margin-top: 50px;
-  margin-left: -1050px;
+  margin-left: -930px;
   margin-right: 1350px;
   font-size: 34px;
 }
@@ -397,14 +430,14 @@ body {
 .logo {
   text-align: center;
   margin-top: 25px;
-  margin-left: 1000px;
+  margin-left: 900px;
   height: 100px;
 }
 
 .ressoc {
   margin-top: 60px;
   position: relative;
-  left:1250px;
+  left:1060px;
   width: 40px;
 }
 
@@ -422,7 +455,8 @@ body {
   border-radius: 100%;
   margin-top: 31%;
   grid-area: photo;
-  margin-left: -1400px;
+  margin-left: -1450px;
+  margin-right: 50px;
   height: 405px;
 
 }
@@ -452,7 +486,7 @@ body {
   display: grid;
   grid-template-columns: 0.1fr 1fr 0.1fr;
   grid-auto-rows: 1fr;
-  margin-top: 820px;
+  margin-top: 1000px;
   margin-left: 20%;
   margin-right: 20%;
   padding-bottom:  100px;
@@ -574,14 +608,131 @@ body {
   background-color: #000526;
 }
 
-.prev {
-  text-align: center;
+#i1, #i2, #i3, #i4{
+	display: none;
 }
 
-.imgprev {
-  height:300px;
-  margin-top: 36px;
-  border-radius: 10px;
+.container{
+		margin: 0 auto;
+		margin-top: 20px;
+		position: relative;
+		width: 50%;
+		padding-bottom: 285px;
+	  user-select: none;
+		background-color: #1c1c1c;
+		border: solid 10px #1f2f5d;
+		border-radius:10px ;
+	}
+
+	.container .slide_img{
+		position: absolute;
+		width: 100%;
+
+	}
+	.container .slide_img img{
+		width: inherit;
+		height: inherit;
+	}
+
+	 .prev, .next{
+		width: 12%;
+		height: inherit;
+    margin-right: 20px;
+		position: absolute;
+		top:45%;
+		background-color: rgba(88, 88, 88,.2);
+		color:rgba(244, 244, 244,.9);
+		z-index: 99;
+		transition: .45s;
+		cursor: pointer;
+		text-align: center;
+	}
+
+	.next{right:0;}
+	.prev{left:0;}
+
+	label span{
+		position: absolute;
+		font-size: 100pt;
+		top: 50%;
+	 	transform: translateY(-50%);
+	}
+
+	.prev:hover, .next:hover{
+		transition: .3s;
+		background-color: rgba(88, 88, 89,.8);
+		color: #ffffff;
+	}
+
+.container #nav_slide{
+	width: 100%;
+	bottom: 12%;
+	height: 11px;
+	position: absolute;
+	text-align: center;
+	z-index: 99;
+	cursor: default;
+}
+
+#nav_slide .dots{
+	top: -5px;
+	width: 18px;
+	height: 18px;
+	margin: 0 4px;
+	position: relative;
+	border-radius: 100%;
+	display: inline-block;
+	background-color: rgba(0, 0, 0, 0.6);
+	transition: .4s;
+}
+
+#nav_slide .dots:hover {
+	cursor: pointer;
+	background-color: rgba(255, 255, 255, 0.9);
+	transition: .25s
+}
+
+.slide_img{z-index: -1;}
+
+	#i1:checked ~ #one  ,
+	#i2:checked ~ #two  ,
+	#i3:checked ~ #three,
+	#i4:checked ~ #four ,
+	#i5:checked ~ #five
+	{z-index: 9; animation: scroll 1s ease-in-out;}
+
+	#i1:checked  ~  #nav_slide #dot1,
+	#i2:checked  ~  #nav_slide #dot2,
+	#i3:checked  ~  #nav_slide #dot3,
+	#i4:checked  ~  #nav_slide #dot4,
+	#i5:checked  ~  #nav_slide #dot5
+	{ background-color: rgba(255,255,255,.9);}
+
+@keyframes scroll{
+	0%{	opacity:.4;}
+	100%{opacity:1;}
+}
+
+@media screen and (max-width: 685px){
+	.container{
+		border: none;
+		width: 100%;
+		height: 0;
+		padding-bottom: 55%;
+	}
+
+	label span { font-size: 50pt; }
+
+	.prev, .next{
+		width: 15%;
+	}
+	#nav_slide .dots{
+		width: 12px;
+		height: 12px;
+	}
+}
+@media screen  and(min-width: 970px){
+	.me{ display: none;}
 }
 
 /* boutons */
